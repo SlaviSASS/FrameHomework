@@ -26,7 +26,7 @@ private static final By EXPECTED_EMAIL = new By.ByXPath("//*[@id=\"form-customer
     }
 
     public static void writeInEmailField(){
- //       driver.findElement(FILTER_BY_EMAIL_FIELD).sendKeys(RandomEmailGenerator.generateRandomEmail());
+
         driver.findElement(FILTER_BY_EMAIL_FIELD).sendKeys(EmailGenerator.generateRandomEmail());
     }
     public static void clickOnFilterButton(){

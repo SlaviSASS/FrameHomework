@@ -12,6 +12,7 @@ public class LoginPage extends BasePage {
     private static final By LOGIN_INPUT_BUTTON = By.className("btn-primary");
     private static final By LOGIN_VALIDATION_ERROR = By.cssSelector(".alert-danger");
     private static final String LOGIN_PAGE_URL = "http://shop.pragmatic.bg/admin/";
+private static final By PLEASE_ENTER_YOUR_LOGIN_DETAILS_MESSAGE = new By.ByXPath("//h1");
 
 
     public static void goToLoginPage() {
@@ -34,5 +35,8 @@ public class LoginPage extends BasePage {
         String actualValidationMessage = driver.findElement(LOGIN_VALIDATION_ERROR).getText();
         Assert.assertTrue(actualValidationMessage.contains(expectedValidationMessage));
     }
-
+public static void verifyBeingAtLoginPage(){
+    String loginDetailsMessage = driver.findElement(PLEASE_ENTER_YOUR_LOGIN_DETAILS_MESSAGE).getText();
+    Assert.assertEquals(loginDetailsMessage, "Please enter your login details.");
+}
 }

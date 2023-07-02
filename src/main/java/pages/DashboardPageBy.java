@@ -10,10 +10,13 @@ import utils.WaitTool;
 
 import java.time.Duration;
 
-public class DashboardPageBy {
+public class DashboardPageBy extends BasePage{
 
     private static final By USERNAME_LINK = new By.ByXPath("//*[@id='menu-customer']/a");
+    private static final By LOGOUT_BUTTON = new By.ByXPath("//i[@class=\"fa fa-sign-out\"]");
 
 
-
+    public static void clickOnLogoutButton (){
+        BasePage.clickOnElementByLocator(LOGOUT_BUTTON);
+    }
 }

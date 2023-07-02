@@ -9,13 +9,35 @@ public class EmailGenerator {
     private static String email;
 
 
-
     public static String generateRandomEmail() {
         if (email == null) {
-            String uniqueId = RandomStringUtils.randomAlphabetic(5);
-            email = "test" + uniqueId + "@example.com";
+            String randomAlphabetic = RandomStringUtils.randomAlphabetic(5);
+            email =  randomAlphabetic + "@Slavi.com";
         }
         return email;
     }
-    
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -33,11 +33,6 @@ public class AddNewCustomerPage extends BasePage {
 
     public static void writeInEmailField() {
 
-//        String prefix = RandomStringUtils.randomAlphabetic(7);
-//        String sufix = RandomStringUtils.randomAlphabetic(5);
-//        String domain = RandomStringUtils.randomAlphabetic(3);
-//        String emailAddress = prefix + "@" + sufix + "." + domain;
-      //  driver.findElement(EMAIL).sendKeys(RandomEmailGenerator.generateRandomEmail());
         driver.findElement(EMAIL).sendKeys(EmailGenerator.generateRandomEmail());
     }
 
