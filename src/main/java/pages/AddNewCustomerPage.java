@@ -4,14 +4,14 @@ import org.apache.commons.lang3.RandomStringUtils;
 import core.BasePage;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
-import utils.RandomEmailGenerator;
+import utils.EmailGenerator;
 
 public class AddNewCustomerPage extends BasePage {
     String email;
 
     @BeforeClass
     public void setUp() {
-        email = RandomEmailGenerator.generateRandomEmail();
+        email = EmailGenerator.generateRandomEmail();
     }
     private static final By FIRST_NAME_FIELD = new By.ByXPath("//*[@id=\"input-firstname\"]");
     private static final By LAST_NAME_FIELD = new By.ByXPath("//*[@id=\"input-lastname\"]");
@@ -37,7 +37,8 @@ public class AddNewCustomerPage extends BasePage {
 //        String sufix = RandomStringUtils.randomAlphabetic(5);
 //        String domain = RandomStringUtils.randomAlphabetic(3);
 //        String emailAddress = prefix + "@" + sufix + "." + domain;
-        driver.findElement(EMAIL).sendKeys(RandomEmailGenerator.generateRandomEmail());
+      //  driver.findElement(EMAIL).sendKeys(RandomEmailGenerator.generateRandomEmail());
+        driver.findElement(EMAIL).sendKeys(EmailGenerator.generateRandomEmail());
     }
 
     public static void writeInTelephoneNumberField(String phoneNumber) {

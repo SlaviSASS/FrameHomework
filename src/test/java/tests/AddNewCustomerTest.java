@@ -2,12 +2,9 @@ package tests;
 
 import compolents.AdminLeftNavigationBar;
 import core.BaseTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.AddNewCustomerPage;
 import pages.CustomersPage;
-import pages.DashboardPage;
-import utils.RandomEmailGenerator;
 
 public class AddNewCustomerTest extends BaseTest {
 
@@ -27,7 +24,8 @@ public class AddNewCustomerTest extends BaseTest {
         AddNewCustomerPage.writeInConfirmPasswordField();
         AddNewCustomerPage.clickOnSaveButton();
         CustomersPage.writeInEmailField();
-      CustomersPage.clickOnFilterButton();
+        CustomersPage.clickOnFilterButton();
+        CustomersPage.verifyCustomerIsCreated();
 
 
     }
